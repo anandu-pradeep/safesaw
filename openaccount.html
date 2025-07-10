@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Open Account | Safe Saw</title>
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/favicon.png">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f9;
+    }
+
+    .navbar {
+      background-color: #003366;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .ex-header {
+      padding-top: 120px;
+      padding-bottom: 30px;
+      background-color: #003366;
+      color: white;
+    }
+
+    .form-container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      background-color: #003366;
+      border-color: #003366;
+    }
+
+    .btn-primary:hover {
+      background-color: #002244;
+      border-color: #002244;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer i {
+      padding: 0 8px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Safe Saw</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#header">Home</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="ex-header text-center">
+  <div class="container">
+    <h1>Open a New Account</h1>
+    <p class="lead mt-2">Join Safe Saw and experience secure and modern banking</p>
+  </div>
+</header>
+
+<!-- Form Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="form-container">
+        <form action="open_account.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" name="first_name" id="firstName" required>
+            </div>
+            <div class="col-md-6">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" name="last_name" id="lastName" required>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" name="dob" id="dob" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="address">Address</label>
+            <textarea class="form-control" name="address" id="address" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="aadhar">Aadhar Number</label>
+            <input type="text" class="form-control" name="aadhar" id="aadhar" required placeholder="1234-5678-9012">
+          </div>
+
+          <div class="mb-3">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="+91-9876543210" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="photo">Upload Photo</label>
+            <input class="form-control" type="file" name="photo" id="photo" accept="image/*" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="accountType">Account Type</label>
+            <select class="form-select" name="account_type" id="accountType" required>
+              <option value="" selected disabled>Select Account Type</option>
+              <option value="savings">Savings</option>
+              <option value="zero_balance">Zero Balance</option>
+              <option value="business">Business</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="deposit">Initial Deposit Amount</label>
+            <input type="number" class="form-control" name="deposit" id="deposit" placeholder="₹5000" required>
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container d-flex justify-content-between">
+    <p class="mb-0">© 2025 Safe Saw Bank</p>
+    <div>
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-mastercard"></i>
+      <i class="fab fa-cc-paypal"></i>
+      <i class="fab fa-cc-amazon-pay"></i>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
